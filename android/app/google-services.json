@@ -1,0 +1,68 @@
+{
+  "project_info": {
+    "project_number": "859501157721",
+    "project_id": "biltek-bbc2e",
+    "storage_bucket": "biltek-bbc2e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:859501157721:android:032008e1bb6c790a11c048",
+        "android_client_info": {
+          "package_name": "com.bilisim.tek.untitled"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "859501157721-cp5cjk9tk360tv487shf4hspgiibni2j.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDnMQll4UohXSLa4BOw66zImAaqgrjshUo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "859501157721-cp5cjk9tk360tv487shf4hspgiibni2j.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:859501157721:android:f82c0eaaedd2e11311c048",
+        "android_client_info": {
+          "package_name": "com.tek.biltek.biltek"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "859501157721-cp5cjk9tk360tv487shf4hspgiibni2j.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDnMQll4UohXSLa4BOw66zImAaqgrjshUo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "859501157721-cp5cjk9tk360tv487shf4hspgiibni2j.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
