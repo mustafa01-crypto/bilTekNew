@@ -221,24 +221,19 @@ class _YazilimState extends State<Yazilim> {
               Center(
                 child: Padding(
                   padding: const EdgeInsets.only(
-                      left: 8, top: 15, right: 8, bottom: 15),
-                  child: Container(
-                    width: width * 9 / 10,
-                    height: height * 1 / 15,
-                    child: ElevatedButton(
-                      onPressed: () {
-                        talepGonder(t1.text);
-                        showMaterialDialog(
-                            title: "Talebiniz Başarıyla Gönderildi",
-                            content: "Talebiniz Başarıyla Gönderildi",
-                            context: context);
-                      },
-                      child: Text('Talebi Gönder'),
-                      style: ElevatedButton.styleFrom(
-                        primary: turuncu,
-                        shape: BeveledRectangleBorder(
-                            borderRadius: BorderRadius.circular(12)),
-                      ),
+                      left: 8, top: 30, right: 8, bottom: 15),
+                  child: InkWell(
+                    onTap: ()
+                    {
+                      talepGonder(t1.text);
+                      showMaterialDialog(
+                          title: "Talebiniz Başarıyla Gönderildi",
+                          content: "Talebiniz Başarıyla Gönderildi",
+                          context: context);
+                    },
+                    child: Container(
+
+                      child: Image.asset("assets/talep.png",fit: BoxFit.fill,),
                     ),
                   ),
                 ),

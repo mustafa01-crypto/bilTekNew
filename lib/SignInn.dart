@@ -53,7 +53,7 @@ class _SignInState extends State<SignIn> {
 
     return SafeArea(
       child: Scaffold(
-        backgroundColor: mavi,
+        backgroundColor: Colors.white,
         body: SingleChildScrollView(
           child: Container(
             child: Form(
@@ -67,7 +67,7 @@ class _SignInState extends State<SignIn> {
                     height: height,
                     width: width,
                     decoration: BoxDecoration(
-                      color: mavi,
+                      color: Colors.white,
                     ),
                     child: Column(
                       children: [
@@ -92,10 +92,10 @@ class _SignInState extends State<SignIn> {
                             },
                             controller: t1,
                             keyboardType: TextInputType.emailAddress,
-                            style: TextStyle(color: Colors.white),
+                            style: TextStyle(color: Colors.grey.shade800),
                             decoration: InputDecoration(
                                 hintText: "E mail",
-                                hintStyle: TextStyle(color: Colors.white)
+                                hintStyle: TextStyle(color: Colors.grey.shade700)
                                 // icon is 48px widget.
                                 ),
                           ),
@@ -105,11 +105,11 @@ class _SignInState extends State<SignIn> {
                               left: 8, top: 15, right: 8, bottom: 15),
                           child: TextFormField(
                               controller: t2,
-                              style: TextStyle(color: Colors.white),
+                              style: TextStyle(color: Colors.grey.shade800),
                               obscureText: showPassword,
                               decoration: InputDecoration(
                                 hintText: "Şifre",
-                                hintStyle: TextStyle(color: Colors.white),
+                                hintStyle: TextStyle(color: Colors.grey.shade700),
                                 suffixIcon: Padding(
                                   padding: EdgeInsets.all(0.0),
                                   child: showPassword == false
@@ -143,49 +143,38 @@ class _SignInState extends State<SignIn> {
                         ),
                         Padding(
                           padding: EdgeInsets.only(
-                              left: width * 1 / 20,
+                              left: width * 1 / 30,
                               top: 15,
-                              right: width * 1 / 20,
+                              right: width * 1 / 30,
                               bottom: 15),
-                          child: Container(
-                            width: width * 9 / 10,
-                            height: height * 1 / 15,
-                            child: ElevatedButton(
-                              onPressed: () {
-                                if (_formKey.currentState!.validate()) {
-                                  girisYap();
+                          child: InkWell(
+                            onTap: (){
+                              if (_formKey.currentState!.validate()) {
+                                girisYap();
 
-                                  Get.to(() => AnaSayfa());
-                                }
-                              },
-                              child: Text('GİRİŞ YAP'),
-                              style: ElevatedButton.styleFrom(
-                                primary: turuncu,
-                                shape: BeveledRectangleBorder(
-                                    borderRadius: BorderRadius.circular(12)),
-                              ),
+                                Get.to(() => AnaSayfa());
+                              }
+                            },
+                            child: Container(
+
+                              child: Image.asset("assets/grs1.png",fit: BoxFit.fill,)
                             ),
                           ),
                         ),
                         Padding(
                           padding: EdgeInsets.only(
-                              left: width * 1 / 20,
+                              left: width * 1 / 30,
                               top: 15,
-                              right: width * 1 / 20,
+                              right: width * 1 / 30,
                               bottom: 15),
-                          child: Container(
-                            width: width * 9 / 10,
-                            height: height * 1 / 15,
-                            child: ElevatedButton(
-                              onPressed: () {
-                                Get.to(() => SignUp());
-                              },
-                              child: Text('KAYIT OL'),
-                              style: ElevatedButton.styleFrom(
-                                primary: turuncu,
-                                shape: BeveledRectangleBorder(
-                                    borderRadius: BorderRadius.circular(12)),
-                              ),
+                          child: InkWell(
+                            onTap: ()
+                            {
+                              Get.to(() => SignUp());
+                            },
+                            child: Container(
+
+                              child: Image.asset("assets/kyt1.png",fit: BoxFit.fill,)
                             ),
                           ),
                         )

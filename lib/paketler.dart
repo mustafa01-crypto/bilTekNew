@@ -23,7 +23,8 @@ class _PaketlerState extends State<Paketler> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: WebView(
-        initialUrl: 'http://www.haneltedarik.com/',
+        initialUrl: 'https://hasansabbah284.wixsite.com/pazarlama',
+        javascriptMode: JavascriptMode.unrestricted,
 
       ),
     );

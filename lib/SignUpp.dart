@@ -72,7 +72,7 @@ class _SignUpState extends State<SignUp> {
 
     return SafeArea(
       child: Scaffold(
-        backgroundColor: mavi,
+        backgroundColor: Colors.white,
         body: SingleChildScrollView(
           child: Container(
             child: Form(
@@ -86,7 +86,7 @@ class _SignUpState extends State<SignUp> {
                         EdgeInsets.only(left: 0, top: 0, right: 0, bottom: 50),
                     width: width,
                     decoration: BoxDecoration(
-                      color: mavi,
+                      color: Colors.white,
                     ),
                     child: Column(
                       children: [
@@ -100,6 +100,7 @@ class _SignUpState extends State<SignUp> {
                         formElement(
                             textEditingController: t1,
                             text: "Ad Soyad",
+
                             textInputType: TextInputType.text,
                             icon: Icon(
                               Icons.ac_unit,
@@ -118,11 +119,11 @@ class _SignUpState extends State<SignUp> {
                                   : "Lütfen geçerli bir mail adresi giriniz";
                             },
                             keyboardType: TextInputType.emailAddress,
-                            style: TextStyle(color: Colors.white),
+                            style: TextStyle(color: Colors.grey.shade800),
                             controller: t2,
                             decoration: InputDecoration(
                               hintText: "Email",
-                              hintStyle: hint,
+                              hintStyle: TextStyle(color: Colors.grey.shade700),
                               suffixIcon: Icon(
                                 Icons.ac_unit,
                                 size: 30,
@@ -144,12 +145,12 @@ class _SignUpState extends State<SignUp> {
                               return null;
                             },
                             keyboardType: TextInputType.text,
-                            style: TextStyle(color: Colors.white),
+                            style: TextStyle(color: Colors.grey.shade800),
                             controller: t3,
                             obscureText: true,
                             decoration: InputDecoration(
                               hintText: "Parola",
-                              hintStyle: hint,
+                              hintStyle: TextStyle(color: Colors.grey.shade700),
                               suffixIcon: Icon(
                                 Icons.ac_unit,
                                 size: 30,
@@ -174,12 +175,12 @@ class _SignUpState extends State<SignUp> {
                               return "Parola aynı olmalıdır";
                             },
                             keyboardType: TextInputType.text,
-                            style: TextStyle(color: Colors.white),
+                            style: TextStyle(color: Colors.grey.shade800),
                             controller: t4,
                             obscureText: true,
                             decoration: InputDecoration(
                               hintText: "Parola Yeniden",
-                              hintStyle: hint,
+                              hintStyle: TextStyle(color: Colors.grey.shade700),
                               suffixIcon: Icon(
                                 Icons.ac_unit,
                                 size: 30,
@@ -234,50 +235,39 @@ class _SignUpState extends State<SignUp> {
                         SizedBox(
                           height: height * 1 / 30,
                         ),
-                        TextButton(
-                          onPressed: () {
-                            Get.to(() => SignIn());
-                          },
-                          child: Text(
-                            "Hesabım var(Giriş Yap)",
-                            style: TextStyle(
-                                color: Colors.white,
-                                fontSize: 18,
-                                decoration: TextDecoration.underline),
-                          ),
+                        Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: InkWell(
+                              onTap: ()
+                              {
+                                Get.to(() => SignIn());
+                              },
+                              child: Image.asset("assets/var.png",fit: BoxFit.fill,)),
                         ),
                         Padding(
                           padding: const EdgeInsets.all(8.0),
-                          child: Container(
-                            width: width * 1 / 2,
-                            height: height * 1 / 15,
-                            child: ElevatedButton(
-                              onPressed: () {
-                                if (_formKey.currentState!.validate()) {
-                                  signUp(
-                                      t1.text,
-                                      t2.text,
-                                      t3.text,
-                                      t5.text,
-                                      t6.text,
-                                      t11.text,
-                                      t12.text,
-                                      t13.text,
-                                      t14.text,
-                                      t15.text);
+                          child: InkWell(
+                            onTap: ()
+                            {
+                              if (_formKey.currentState!.validate()) {
+                                signUp(
+                                    t1.text,
+                                    t2.text,
+                                    t3.text,
+                                    t5.text,
+                                    t6.text,
+                                    t11.text,
+                                    t12.text,
+                                    t13.text,
+                                    t14.text,
+                                    t15.text);
 
-                                  Get.to(() => AnaSayfa());
-                                }
-                              },
-                              child: Text(
-                                'DEVAM ET',
-                                style: TextStyle(fontSize: 22),
-                              ),
-                              style: ElevatedButton.styleFrom(
-                                primary: turuncu,
-                                shape: BeveledRectangleBorder(
-                                    borderRadius: BorderRadius.circular(12)),
-                              ),
+                                Get.to(() => AnaSayfa());
+                              }
+                            },
+                            child: Container(
+
+                              child: Image.asset("assets/devam.png",fit: BoxFit.fill,)
                             ),
                           ),
                         ),
@@ -302,10 +292,11 @@ class _SignUpState extends State<SignUp> {
       padding: const EdgeInsets.only(left: 8, top: 5, right: 8, bottom: 5),
       child: TextFormField(
         keyboardType: textInputType,
-        style: TextStyle(color: Colors.white),
+        style: TextStyle(color: Colors.grey.shade800),
         controller: textEditingController,
         decoration:
-            InputDecoration(suffixIcon: icon, hintText: text, hintStyle: hint
+            InputDecoration(suffixIcon: icon, hintText: text,
+              hintStyle: TextStyle(color: Colors.grey.shade700),
                 // icon is 48px widget.
                 ),
       ),

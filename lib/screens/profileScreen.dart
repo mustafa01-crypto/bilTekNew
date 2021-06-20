@@ -179,29 +179,29 @@ class _ProfileScreenState extends State<ProfileScreen> {
                           child: indirmeBaglantisi == null
                               ? Image.asset(
                             "assets/prof.png",
-                            width: 100,
-                            height: 100,
+                            width: 200,
+                            height: 200,
                           )
                               : Image.network(
                             indirmeBaglantisi!,
-                            width: 100,
-                            height: 100,
+                            width: 200,
+                            height: 200,
                             fit: BoxFit.cover,
                           )),
                     ))),
             Text(
-              "Text 1",
+              loggedInuser.email.toString(),
               style: TextStyle(
                   color: Colors.grey.shade900, fontSize: width * 1 / 22),
             ),
             SizedBox(
-              height: height * 1 / 120,
+              height: height * 1 / 60,
             ),
-            Text("Text 2",
+            Text(loggedInuser.uid.toString(),
                 style: TextStyle(
                     color: Colors.grey.shade800, fontSize: width * 1 / 25)),
             SizedBox(
-              height: height * 1 / 60,
+              height: height * 1 / 30,
             ),
             Padding(
               padding: EdgeInsets.only(
@@ -223,7 +223,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                   child: TextField(
                     decoration: InputDecoration(
                       border: InputBorder.none,
-                      hintText: "Text 3",
+                      hintText: "BİLGİ TEKNOLOJİ ŞİRKETİ",
                       hintStyle: inputStyle,
                       labelStyle:
                       new TextStyle(color: const Color(0xFFFFFFFF)),
@@ -255,7 +255,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                   child: TextField(
                     decoration: InputDecoration(
                       border: InputBorder.none,
-                      hintText: "hahah",
+                      hintText: "MUSTAFA YILDIZ",
                       hintStyle: inputStyle,
                       labelStyle:
                       new TextStyle(color: const Color(0xFFFFFFFF)),
@@ -292,55 +292,25 @@ class _ProfileScreenState extends State<ProfileScreen> {
             ),
             Padding(
               padding: EdgeInsets.only(
-                  left: width * 1 / 20, right: width * 1 / 20),
-              child: Container(
-                width: width * 9 / 10,
-                height: height * 1 / 15,
-                child: ElevatedButton(
-                  onPressed: () {
-                    showMaterialDialog(
-                      context: context,
-                      title: "Bilgileriniz Güncellendi",
-                      content: "Bilgileriniz Güncellendi",
-                    );
-                  },
-                  child: Text(
-                    'Bilgileri Güncelle',
-                    style: buttonText,
-                  ),
-                  style: ElevatedButton.styleFrom(
-                    primary: turuncu,
-                    shape: BeveledRectangleBorder(
-                        borderRadius: BorderRadius.circular(12)),
-                  ),
+                  left: width * 1 / 20,top: 30, right: width * 1 / 20),
+              child: InkWell(
+                onTap: ()
+                {
+                  showMaterialDialog(
+                      title: "Bilgileriniz Başarıyla Gönderildi",
+                      content: "Bilgileriniz Başarıyla Gönderildi",
+                      context: context);
+                },
+                child: Container(
+
+                  child: Image.asset("assets/bilgi.png",fit: BoxFit.fill,),
                 ),
               ),
             ),
             SizedBox(
               height: height * 1 / 60,
             ),
-            Padding(
-              padding: EdgeInsets.only(
-                  left: width * 1 / 20, right: width * 1 / 20),
-              child: Container(
-                width: width * 9 / 10,
-                height: height * 1 / 15,
-                child: ElevatedButton(
-                  onPressed: () {
-                    //  baglantiAl();
-                  },
-                  child: Text(
-                    'Bilgileri Güncelle',
-                    style: buttonText,
-                  ),
-                  style: ElevatedButton.styleFrom(
-                    primary: turuncu,
-                    shape: BeveledRectangleBorder(
-                        borderRadius: BorderRadius.circular(12)),
-                  ),
-                ),
-              ),
-            ),
+
           ],
         ),
       ),

@@ -151,33 +151,10 @@ class _HomeScreenState extends State<HomeScreen> {
                       ),
                       onCreditCardModelChange: onCreditCardModelChange,
                     ),
-                    ElevatedButton(
-                      style: ElevatedButton.styleFrom(
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(8.0),
-                        ),
-                        primary: turuncu,
-                      ),
-                      child: Container(
-                        margin: const EdgeInsets.all(8),
-                        child: const Text(
-                          'SATIN AL',
-                          style: TextStyle(
-                            color: Colors.white,
-                            fontFamily: 'halter',
-                            fontSize: 14,
-                            package: 'flutter_credit_card',
-                          ),
-                        ),
-                      ),
-                      onPressed: () {
-                        if (formKey.currentState!.validate()) {
-                          print('valid!');
-                        } else {
-                          print('invalid!');
-                        }
-                      },
-                    )
+                    Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 8.0,vertical: 10),
+                      child: Image.asset("assets/stnal.png",fit: BoxFit.fill,),
+                    ),
                   ],
                 ),
               ),
