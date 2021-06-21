@@ -79,44 +79,72 @@ class _SignInState extends State<SignIn> {
                             width: width * 1 / 3,
                           )),
                         ),
-                        Padding(
-                          padding: const EdgeInsets.only(
-                              left: 8, top: 15, right: 8, bottom: 15),
-                          child: TextFormField(
-                            validator: (val) {
-                              return RegExp(
-                                          r"^[a-zA-Z0-9.a-zA-Z0-9.!#$%&'*+-/=?^_`{|}~]+@[a-zA-Z0-9]+\.[a-zA-Z]+")
-                                      .hasMatch(val!)
-                                  ? null
-                                  : "Lütfen geçerli bir mail adresi giriniz";
-                            },
-                            controller: t1,
-                            keyboardType: TextInputType.emailAddress,
-                            style: TextStyle(color: Colors.grey.shade800),
-                            decoration: InputDecoration(
-                                hintText: "E mail",
-                                hintStyle: TextStyle(color: Colors.grey.shade700)
-                                // icon is 48px widget.
-                                ),
+                        SizedBox(
+                          height: 20,
+                        ),
+                        Container(
+                          height: height * 1 / 16,
+                          width: width * 9.6 / 10,
+                          decoration: BoxDecoration(
+                            border: Border.all(color: turuncu, width: 2),
+                            color: Colors.white,
+                            borderRadius: BorderRadius.only(
+                                topLeft: Radius.circular(10),
+                                topRight: Radius.circular(10),
+                                bottomLeft: Radius.circular(10),
+                                bottomRight: Radius.circular(10)),
+                          ),
+                          child: Padding(
+                            padding: const EdgeInsets.all(8),
+                            child: TextFormField(
+                              validator: (val) {
+                                return RegExp(
+                                            r"^[a-zA-Z0-9.a-zA-Z0-9.!#$%&'*+-/=?^_`{|}~]+@[a-zA-Z0-9]+\.[a-zA-Z]+")
+                                        .hasMatch(val!)
+                                    ? null
+                                    : "Lütfen geçerli bir mail adresi giriniz";
+                              },
+                              controller: t1,
+                              keyboardType: TextInputType.emailAddress,
+                              style: TextStyle(color: Colors.grey.shade800),
+                              decoration: InputDecoration(
+                                  hintText: "E mail",
+                                  hintStyle:
+                                      TextStyle(color: Colors.grey.shade700)
+                                  // icon is 48px widget.
+                                  ),
+                            ),
                           ),
                         ),
-                        Padding(
-                          padding: const EdgeInsets.only(
-                              left: 8, top: 15, right: 8, bottom: 15),
-                          child: TextFormField(
-                              controller: t2,
-                              style: TextStyle(color: Colors.grey.shade800),
-                              obscureText: showPassword,
-                              decoration: InputDecoration(
-                                hintText: "Şifre",
-                                hintStyle: TextStyle(color: Colors.grey.shade700),
-                                suffixIcon: Padding(
-                                  padding: EdgeInsets.all(0.0),
-                                  child: showPassword == false
+                        SizedBox(
+                          height: 25,
+                        ),
+                        Container(
+                          height: height * 1 / 16,
+                          width: width * 9.6 / 10,
+                          decoration: BoxDecoration(
+                            border: Border.all(color: turuncu, width: 2),
+                            color: Colors.white,
+                            borderRadius: BorderRadius.only(
+                                topLeft: Radius.circular(10),
+                                topRight: Radius.circular(10),
+                                bottomLeft: Radius.circular(10),
+                                bottomRight: Radius.circular(10)),
+                          ),
+                          child: Padding(
+                            padding: EdgeInsets.only(bottom: height * 1 / 100,left: 8,right: 8),
+                            child: TextFormField(
+                                controller: t2,
+                                style: TextStyle(color: Colors.grey.shade800),
+                                obscureText: showPassword,
+                                decoration: InputDecoration(
+                                  hintText: "Şifre",
+                                  hintStyle:
+                                      TextStyle(color: Colors.grey.shade700),
+                                  suffixIcon: showPassword == false
                                       ? IconButton(
-                                          icon: Icon(Icons.remove_red_eye),
-                                          color:
-                                              Colors.lightBlueAccent.shade700,
+                                          icon: Icon(Icons.visibility_off),
+                                          color: Colors.grey.shade700,
                                           onPressed: () {
                                             setState(() {
                                               showPassword = true;
@@ -131,24 +159,25 @@ class _SignInState extends State<SignIn> {
                                               showPassword = false;
                                             });
                                           },
-                                        ),
-                                ), // icon is 48px widget.
-                              ),
-                              validator: (deger) {
-                                if (deger!.isEmpty || deger.length < 6) {
-                                  return "Lütfen 6 karakterden uzun bir şifre giriniz";
-                                }
-                                return null;
-                              }),
+                                        ), // icon is 48px widget.
+                                ),
+                                validator: (deger) {
+                                  if (deger!.isEmpty || deger.length < 6) {
+                                    return "Lütfen 6 karakterden uzun bir şifre giriniz";
+                                  }
+                                  return null;
+                                }),
+                          ),
                         ),
+                        SizedBox(height: 20,),
                         Padding(
                           padding: EdgeInsets.only(
                               left: width * 1 / 30,
-                              top: 15,
+
                               right: width * 1 / 30,
-                              bottom: 15),
+                              ),
                           child: InkWell(
-                            onTap: (){
+                            onTap: () {
                               if (_formKey.currentState!.validate()) {
                                 girisYap();
 
@@ -156,26 +185,27 @@ class _SignInState extends State<SignIn> {
                               }
                             },
                             child: Container(
-
-                              child: Image.asset("assets/grs1.png",fit: BoxFit.fill,)
-                            ),
+                                child: Image.asset(
+                              "assets/grs1.png",
+                              fit: BoxFit.fill,
+                            )),
                           ),
                         ),
+                        SizedBox(height: 15,),
                         Padding(
                           padding: EdgeInsets.only(
                               left: width * 1 / 30,
-                              top: 15,
                               right: width * 1 / 30,
-                              bottom: 15),
+                              ),
                           child: InkWell(
-                            onTap: ()
-                            {
+                            onTap: () {
                               Get.to(() => SignUp());
                             },
                             child: Container(
-
-                              child: Image.asset("assets/kyt1.png",fit: BoxFit.fill,)
-                            ),
+                                child: Image.asset(
+                              "assets/kyt1.png",
+                              fit: BoxFit.fill,
+                            )),
                           ),
                         )
                       ],

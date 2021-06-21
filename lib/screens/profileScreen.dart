@@ -84,53 +84,47 @@ class _ProfileScreenState extends State<ProfileScreen> {
     final width = MediaQuery.of(context).size.width;
     final height = MediaQuery.of(context).size.height;
 
-    TextStyle inputStyle =
-        TextStyle(color: Colors.grey.shade900, fontSize: width * 1 / 24);
-    TextStyle buttonText = TextStyle(
-        fontSize: width * 1 / 20,
-        color: Colors.white,
-        fontWeight: FontWeight.bold);
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.white,
         title: Center(
             child: _isSearching == false
                 ? Image(
-              image: ExactAssetImage("assets/appBar.png"),
-              height: height * 1 / 14,
-              width: width * 1 / 2,
-              alignment: Alignment.center,
-            )
+                    image: ExactAssetImage("assets/appBar.png"),
+                    height: height * 1 / 14,
+                    width: width * 1 / 2,
+                    alignment: Alignment.center,
+                  )
                 : TextField(
-              controller: _searchQueryController,
-              decoration: InputDecoration(
-                hintText: "Arama yapın",
-              ),
-            )),
+                    controller: _searchQueryController,
+                    decoration: InputDecoration(
+                      hintText: "Arama yapın",
+                    ),
+                  )),
         actions: [
           _isSearching == false
               ? IconButton(
-            icon: Icon(
-              Icons.search,
-              color: turuncu,
-            ),
-            onPressed: () {
-              setState(() {
-                _isSearching = true;
-              });
-            },
-          )
+                  icon: Icon(
+                    Icons.search,
+                    color: turuncu,
+                  ),
+                  onPressed: () {
+                    setState(() {
+                      _isSearching = true;
+                    });
+                  },
+                )
               : IconButton(
-            icon: Icon(
-              Icons.cancel,
-              color: turuncu,
-            ),
-            onPressed: () {
-              setState(() {
-                _isSearching = false;
-              });
-            },
-          ),
+                  icon: Icon(
+                    Icons.cancel,
+                    color: turuncu,
+                  ),
+                  onPressed: () {
+                    setState(() {
+                      _isSearching = false;
+                    });
+                  },
+                ),
           IconButton(
             icon: Icon(
               Icons.add_alert_sharp,
@@ -172,23 +166,23 @@ class _ProfileScreenState extends State<ProfileScreen> {
                     bottom: height * 1 / 50),
                 child: Center(
                     child: InkWell(
-                      onTap: () {
-                        kameradanYukle();
-                      },
-                      child: ClipOval(
-                          child: indirmeBaglantisi == null
-                              ? Image.asset(
-                            "assets/prof.png",
-                            width: 200,
-                            height: 200,
-                          )
-                              : Image.network(
-                            indirmeBaglantisi!,
-                            width: 200,
-                            height: 200,
-                            fit: BoxFit.cover,
-                          )),
-                    ))),
+                  onTap: () {
+                    kameradanYukle();
+                  },
+                  child: ClipOval(
+                      child: indirmeBaglantisi == null
+                          ? Image.asset(
+                              "assets/prof.png",
+                              width: 140,
+                              height: 140,
+                            )
+                          : Image.network(
+                              indirmeBaglantisi!,
+                              width: 140,
+                              height: 140,
+                              fit: BoxFit.cover,
+                            )),
+                ))),
             Text(
               loggedInuser.email.toString(),
               style: TextStyle(
@@ -204,8 +198,8 @@ class _ProfileScreenState extends State<ProfileScreen> {
               height: height * 1 / 30,
             ),
             Padding(
-              padding: EdgeInsets.only(
-                  left: width * 1 / 20, right: width * 1 / 20),
+              padding:
+                  EdgeInsets.only(left: width * 1 / 20, right: width * 1 / 20),
               child: Container(
                 height: height * 1 / 20,
                 width: width * 9 / 10,
@@ -220,13 +214,13 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 ),
                 child: Padding(
                   padding: const EdgeInsets.only(left: 8.0),
-                  child: TextField(
-                    decoration: InputDecoration(
-                      border: InputBorder.none,
-                      hintText: "BİLGİ TEKNOLOJİ ŞİRKETİ",
-                      hintStyle: inputStyle,
-                      labelStyle:
-                      new TextStyle(color: const Color(0xFFFFFFFF)),
+                  child: Center(
+                    child: Text(
+                      "BİLGİ TEKNOLOJİ ŞİRKETİ",
+                      style: TextStyle(
+                          fontSize: 20,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.grey.shade600),
                     ),
                   ),
                 ),
@@ -236,8 +230,8 @@ class _ProfileScreenState extends State<ProfileScreen> {
               height: height * 1 / 60,
             ),
             Padding(
-              padding: EdgeInsets.only(
-                  left: width * 1 / 20, right: width * 1 / 20),
+              padding:
+                  EdgeInsets.only(left: width * 1 / 20, right: width * 1 / 20),
               child: Container(
                 height: height * 1 / 20,
                 width: width * 9 / 10,
@@ -252,15 +246,14 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 ),
                 child: Padding(
                   padding: const EdgeInsets.only(left: 8.0),
-                  child: TextField(
-                    decoration: InputDecoration(
-                      border: InputBorder.none,
-                      hintText: "MUSTAFA YILDIZ",
-                      hintStyle: inputStyle,
-                      labelStyle:
-                      new TextStyle(color: const Color(0xFFFFFFFF)),
-                    ),
-                  ),
+                  child: Center(
+                      child: Text(
+                    "MUSTAFA YILDIZ",
+                    style: TextStyle(
+                        fontSize: 20,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.grey.shade600),
+                  )),
                 ),
               ),
             ),
@@ -292,25 +285,25 @@ class _ProfileScreenState extends State<ProfileScreen> {
             ),
             Padding(
               padding: EdgeInsets.only(
-                  left: width * 1 / 20,top: 30, right: width * 1 / 20),
+                  left: width * 1 / 20, top: 30, right: width * 1 / 20),
               child: InkWell(
-                onTap: ()
-                {
+                onTap: () {
                   showMaterialDialog(
                       title: "Bilgileriniz Başarıyla Gönderildi",
                       content: "Bilgileriniz Başarıyla Gönderildi",
                       context: context);
                 },
                 child: Container(
-
-                  child: Image.asset("assets/bilgi.png",fit: BoxFit.fill,),
+                  child: Image.asset(
+                    "assets/bilgi.png",
+                    fit: BoxFit.fill,
+                  ),
                 ),
               ),
             ),
             SizedBox(
               height: height * 1 / 60,
             ),
-
           ],
         ),
       ),

@@ -4,7 +4,6 @@ import 'package:biltek/screens/settingsScreen.dart';
 import 'package:biltek/wixChat.dart';
 import 'package:custom_bottom_navigation_bar/custom_bottom_navigation_bar_item.dart';
 import 'package:flutter/material.dart';
-import 'constants/constants.dart';
 import 'package:custom_bottom_navigation_bar/custom_bottom_navigation_bar.dart';
 
 class AnaSayfa extends StatefulWidget {
@@ -35,9 +34,9 @@ class _AnaSayfaState extends State<AnaSayfa> {
       body: PageView(
         controller: _pageController,
         children: <Widget>[
-          HomeScreen(),
-          WixChat(),
           SettingsScreen(),
+          WixChat(),
+          HomeScreen(),
           ProfileScreen(),
         ],
       ),
@@ -46,16 +45,16 @@ class _AnaSayfaState extends State<AnaSayfa> {
         backgroundColor: Color(0xfffa751b),
         items: [
           CustomBottomNavigationBarItem(
-            icon: Icons.shopping_basket,
-            title: "Ürünler",
+            icon: Icons.settings,
+            title: "AnaSayfa",
           ),
           CustomBottomNavigationBarItem(
             icon: Icons.chat_outlined,
             title: "Destek",
           ),
           CustomBottomNavigationBarItem(
-            icon: Icons.settings,
-            title: "AnaSayfa",
+            icon: Icons.shopping_basket,
+            title: "Ürünler",
           ),
           CustomBottomNavigationBarItem(
             icon: Icons.people,
