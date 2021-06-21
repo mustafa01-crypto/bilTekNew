@@ -1,7 +1,9 @@
 import 'dart:math';
+import 'package:biltek/screens/bildirimlerScreen.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'Widgets/showDialog.dart';
 import 'constants/constants.dart';
 
@@ -113,6 +115,15 @@ class _YazilimState extends State<Yazilim> {
                       });
                     },
                   ),
+            IconButton(
+              icon: Icon(
+                Icons.add_alert_sharp,
+                color: turuncu,
+              ),
+              onPressed: () {
+                Get.to(Norifications());
+              },
+            ),
           ],
         ),
         body: SingleChildScrollView(

@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'package:biltek/Widgets/showDialog.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -37,19 +38,29 @@ class _SignInState extends State<SignIn> {
   Future<void> girisYap() async {
     try {
       await _auth.signInWithEmailAndPassword(email: t1.text, password: t2.text);
+      Get.to(() => AnaSayfa());
     } on FirebaseAuthException catch (e) {
       if (e.code == 'user-not-found') {
         print('No user found for that email.');
       } else if (e.code == 'wrong-password') {
         print('Wrong password provided for that user.');
+        showMaterialDialog(title: "Hatalı kullanıcı bilgileri ",
+            content: "Lütfen bilgilerinizi kontrol ediniz",
+            context: context);
       }
     }
   }
 
   @override
   Widget build(BuildContext context) {
-    final width = MediaQuery.of(context).size.width;
-    final height = MediaQuery.of(context).size.height;
+    final width = MediaQuery
+        .of(context)
+        .size
+        .width;
+    final height = MediaQuery
+        .of(context)
+        .size
+        .height;
 
     return SafeArea(
       child: Scaffold(
@@ -75,9 +86,9 @@ class _SignInState extends State<SignIn> {
                           padding: EdgeInsets.only(top: height * 1 / 10),
                           child: Center(
                               child: Image.asset(
-                            "assets/logo2.png",
-                            width: width * 1 / 3,
-                          )),
+                                "assets/logo2.png",
+                                width: width * 1 / 3,
+                              )),
                         ),
                         SizedBox(
                           height: 20,
@@ -99,8 +110,8 @@ class _SignInState extends State<SignIn> {
                             child: TextFormField(
                               validator: (val) {
                                 return RegExp(
-                                            r"^[a-zA-Z0-9.a-zA-Z0-9.!#$%&'*+-/=?^_`{|}~]+@[a-zA-Z0-9]+\.[a-zA-Z]+")
-                                        .hasMatch(val!)
+                                    r"^[a-zA-Z0-9.a-zA-Z0-9.!#$%&'*+-/=?^_`{|}~]+@[a-zA-Z0-9]+\.[a-zA-Z]+")
+                                    .hasMatch(val!)
                                     ? null
                                     : "Lütfen geçerli bir mail adresi giriniz";
                               },
@@ -110,9 +121,9 @@ class _SignInState extends State<SignIn> {
                               decoration: InputDecoration(
                                   hintText: "E mail",
                                   hintStyle:
-                                      TextStyle(color: Colors.grey.shade700)
-                                  // icon is 48px widget.
-                                  ),
+                                  TextStyle(color: Colors.grey.shade700)
+                                // icon is 48px widget.
+                              ),
                             ),
                           ),
                         ),
@@ -132,7 +143,8 @@ class _SignInState extends State<SignIn> {
                                 bottomRight: Radius.circular(10)),
                           ),
                           child: Padding(
-                            padding: EdgeInsets.only(bottom: height * 1 / 100,left: 8,right: 8),
+                            padding: EdgeInsets.only(
+                                bottom: height * 1 / 100, left: 8, right: 8),
                             child: TextFormField(
                                 controller: t2,
                                 style: TextStyle(color: Colors.grey.shade800),
@@ -140,26 +152,26 @@ class _SignInState extends State<SignIn> {
                                 decoration: InputDecoration(
                                   hintText: "Şifre",
                                   hintStyle:
-                                      TextStyle(color: Colors.grey.shade700),
+                                  TextStyle(color: Colors.grey.shade700),
                                   suffixIcon: showPassword == false
                                       ? IconButton(
-                                          icon: Icon(Icons.visibility_off),
-                                          color: Colors.grey.shade700,
-                                          onPressed: () {
-                                            setState(() {
-                                              showPassword = true;
-                                            });
-                                          },
-                                        )
+                                    icon: Icon(Icons.visibility_off),
+                                    color: Colors.grey.shade700,
+                                    onPressed: () {
+                                      setState(() {
+                                        showPassword = true;
+                                      });
+                                    },
+                                  )
                                       : IconButton(
-                                          icon: Icon(Icons.remove_red_eye),
-                                          color: Colors.grey.shade700,
-                                          onPressed: () {
-                                            setState(() {
-                                              showPassword = false;
-                                            });
-                                          },
-                                        ), // icon is 48px widget.
+                                    icon: Icon(Icons.remove_red_eye),
+                                    color: Colors.grey.shade700,
+                                    onPressed: () {
+                                      setState(() {
+                                        showPassword = false;
+                                      });
+                                    },
+                                  ), // icon is 48px widget.
                                 ),
                                 validator: (deger) {
                                   if (deger!.isEmpty || deger.length < 6) {
@@ -172,40 +184,38 @@ class _SignInState extends State<SignIn> {
                         SizedBox(height: 20,),
                         Padding(
                           padding: EdgeInsets.only(
-                              left: width * 1 / 30,
+                            left: width * 1 / 30,
 
-                              right: width * 1 / 30,
-                              ),
+                            right: width * 1 / 30,
+                          ),
                           child: InkWell(
                             onTap: () {
                               if (_formKey.currentState!.validate()) {
                                 girisYap();
-
-                                Get.to(() => AnaSayfa());
                               }
                             },
                             child: Container(
                                 child: Image.asset(
-                              "assets/grs1.png",
-                              fit: BoxFit.fill,
-                            )),
+                                  "assets/grs1.png",
+                                  fit: BoxFit.fill,
+                                )),
                           ),
                         ),
                         SizedBox(height: 15,),
                         Padding(
                           padding: EdgeInsets.only(
-                              left: width * 1 / 30,
-                              right: width * 1 / 30,
-                              ),
+                            left: width * 1 / 30,
+                            right: width * 1 / 30,
+                          ),
                           child: InkWell(
                             onTap: () {
                               Get.to(() => SignUp());
                             },
                             child: Container(
                                 child: Image.asset(
-                              "assets/kyt1.png",
-                              fit: BoxFit.fill,
-                            )),
+                                  "assets/kyt1.png",
+                                  fit: BoxFit.fill,
+                                )),
                           ),
                         )
                       ],
