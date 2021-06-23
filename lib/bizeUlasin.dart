@@ -80,6 +80,7 @@ class _BizeUlasinState extends State<BizeUlasin> {
           height: height*3/12,
           width: width*9/10,
           decoration: BoxDecoration(
+            border: Border.all(color: turuncu,width: 2),
             color: Colors.white,
             borderRadius: BorderRadius.only(
                 topLeft: Radius.circular(10),
@@ -87,14 +88,7 @@ class _BizeUlasinState extends State<BizeUlasin> {
                 bottomLeft: Radius.circular(10),
                 bottomRight: Radius.circular(10)
             ),
-            boxShadow: [
-              BoxShadow(
-                color: Colors.grey.withOpacity(0.5),
-                spreadRadius: 5,
-                blurRadius: 7,
-                offset: Offset(0, 3), // changes position of shadow
-              ),
-            ],
+
 
           ),
             child: Column(

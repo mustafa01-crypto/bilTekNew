@@ -194,7 +194,7 @@ class _SignUpState extends State<SignUp> {
                                   color: turuncu,
                                 ),
 
-                                // icon is 48px widget.
+
                               ),
                             ),
                           ),

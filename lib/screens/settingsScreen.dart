@@ -4,8 +4,6 @@ import 'package:biltek/servis.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-
-
 import '../bizeUlasin.dart';
 import '../yazilim.dart';
 import 'bildirimlerScreen.dart';
@@ -110,11 +108,11 @@ class _SettingsScreenState extends State<SettingsScreen> {
                         onTap: () {
                           Get.to(() => Servis());
                         },
-                        child: conPngler(resimYolu: "assets/servis.png")),
+                        child: conPngler(resimYolu: "assets/servisss.png")),
                   ),
                   Padding(
                     padding: EdgeInsets.only(left: width * 1 / 48),
-                    child: conPngler(resimYolu: "assets/notebookservis.png"),
+                    child: conPngler(resimYolu: "assets/booknote.png"),
                   ),
                 ],
               ),
@@ -124,11 +122,11 @@ class _SettingsScreenState extends State<SettingsScreen> {
                 children: [
                   Padding(
                     padding: EdgeInsets.only(left: width * 1 / 30),
-                    child: conPngler(resimYolu: "assets/tabletservis.png"),
+                    child: conPngler(resimYolu: "assets/tablets.png"),
                   ),
                   Padding(
                     padding: EdgeInsets.only(left: width * 1 / 48),
-                    child: conPngler(resimYolu: "assets/internet.png"),
+                    child: conPngler(resimYolu: "assets/internets.png"),
                   ),
                 ],
               ),
@@ -144,11 +142,11 @@ class _SettingsScreenState extends State<SettingsScreen> {
                           Get.to(Paketler());
                         },
                         child
-                        : conPngler(resimYolu: "assets/paket.png")),
+                        : conPngler(resimYolu: "assets/pakets.png")),
                   ),
                   Padding(
                     padding: EdgeInsets.only(left: width * 1 / 48),
-                    child: conPngler(resimYolu: "assets/yazici.png"),
+                    child: conPngler(resimYolu: "assets/yazicis.png"),
                   ),
                 ],
               ),
@@ -158,11 +156,11 @@ class _SettingsScreenState extends State<SettingsScreen> {
                 children: [
                   Padding(
                     padding: EdgeInsets.only(left: width * 1 / 30),
-                    child: conPngler(resimYolu: "assets/santral.png"),
+                    child: conPngler(resimYolu: "assets/santrals.png"),
                   ),
                   Padding(
                     padding: EdgeInsets.only(left: width * 1 / 48),
-                    child: conPngler(resimYolu: "assets/kamera.png"),
+                    child: conPngler(resimYolu: "assets/kameras.png"),
                   ),
                 ],
               ),
@@ -176,7 +174,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
                         onTap: () {
                           Get.to(() => BizeUlasin());
                         },
-                        child: conPngler(resimYolu: "assets/iletisim.png")),
+                        child: conPngler(resimYolu: "assets/iletisims.png")),
                   ),
                   Padding(
                     padding: EdgeInsets.only(left: width * 1 / 48),
@@ -184,7 +182,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
                         onTap: () {
                           Get.to(() => Yazilim());
                         },
-                        child: conPngler(resimYolu: "assets/yazilim.png")),
+                        child: conPngler(resimYolu: "assets/yazilims.png")),
                   ),
                 ],
               ),
@@ -194,11 +192,11 @@ class _SettingsScreenState extends State<SettingsScreen> {
                 children: [
                   Padding(
                     padding: EdgeInsets.only(left: width * 1 / 30),
-                    child: conPngler(resimYolu: "assets/yedekparca.png"),
+                    child: conPngler(resimYolu: "assets/yedeks.png"),
                   ),
                   Padding(
                     padding: EdgeInsets.only(left: width * 1 / 48),
-                    child: conPngler(resimYolu: "assets/market.png"),
+                    child: conPngler(resimYolu: "assets/markets.png"),
                   ),
                 ],
               ),
