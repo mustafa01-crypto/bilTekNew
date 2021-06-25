@@ -210,7 +210,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
     var height = MediaQuery.of(context).size.height;
     return Container(
       width: width * 11 / 24,
-      height: height * 1 / 7,
+      height: height * 3 / 23,
       child: Image.asset(
         resimYolu,
         fit: BoxFit.contain,

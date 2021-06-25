@@ -2,7 +2,7 @@
     package="com.tek.biltek.biltek">
    <application
        android:usesCleartextTraffic="true"
-        android:label="biltek"
+        android:label="BİLGİ VE TEKNOLOJİ"
         android:icon="@mipmap/launcher_icon">
 
         <activity

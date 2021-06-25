@@ -79,7 +79,7 @@ class _YazilimDestekState extends State<YazilimDestek> {
                                 child: kisaExpanded(document, 'talepturu'),
                               ),
                               kisaExpanded(document, 'talep'),
-                              kisaExpanded(document, 'isFixed' ),
+
                             ],
 
                           ),

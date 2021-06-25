@@ -93,9 +93,10 @@ class _SignUpState extends State<SignUp> {
                           padding: EdgeInsets.only(top: height * 1 / 20),
                           child: Image.asset(
                             "assets/logo2.png",
-                            width: width * 1 / 3,
+                            width: width * 4 / 9,
                           ),
                         ),
+                        SizedBox(height: 25,),
                         Container(
                           height: height * 1 / 16,
                           width: width * 9.6 / 10,

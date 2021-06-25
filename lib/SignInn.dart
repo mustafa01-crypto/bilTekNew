@@ -87,11 +87,11 @@ class _SignInState extends State<SignIn> {
                           child: Center(
                               child: Image.asset(
                                 "assets/logo2.png",
-                                width: width * 1 / 3,
+                                width: width * 4 / 9,
                               )),
                         ),
                         SizedBox(
-                          height: 20,
+                          height: 25,
                         ),
                         Container(
                           height: height * 1 / 16,
@@ -128,7 +128,7 @@ class _SignInState extends State<SignIn> {
                           ),
                         ),
                         SizedBox(
-                          height: 25,
+                          height: 15,
                         ),
                         Container(
                           height: height * 1 / 16,
@@ -181,7 +181,7 @@ class _SignInState extends State<SignIn> {
                                 }),
                           ),
                         ),
-                        SizedBox(height: 20,),
+                        SizedBox(height: 25,),
                         Padding(
                           padding: EdgeInsets.only(
                             left: width * 1 / 30,

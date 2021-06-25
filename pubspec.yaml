@@ -25,7 +25,6 @@ dependencies:
   firebase_auth: ^1.2.0
   firebase_storage: ^8.1.0
   cloud_firestore: ^2.2.0
-
   flutter_tawk: ^0.0.5
   image_picker: ^0.7.5+3
   get: ^4.1.4
