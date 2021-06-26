@@ -197,16 +197,16 @@ class _ServisState extends State<Servis> {
                   height: height * 3 / 10,
                   width: width * 9 / 10,
                   decoration: BoxDecoration(
-                    border: Border.all(color: turuncu, width: 2),
+                    border: Border.all(color: turuncu, width: 3),
                     color: Colors.white,
                     borderRadius: BorderRadius.only(
-                        topLeft: Radius.circular(10),
-                        topRight: Radius.circular(10),
-                        bottomLeft: Radius.circular(10),
-                        bottomRight: Radius.circular(10)),
+                        topLeft: Radius.circular(25),
+                        topRight: Radius.circular(25),
+                        bottomLeft: Radius.circular(25),
+                        bottomRight: Radius.circular(25)),
                   ),
                   child: Padding(
-                    padding: const EdgeInsets.only(left: 8.0),
+                    padding: const EdgeInsets.only(left: 15.0),
                     child: TextField(
                       controller: t1,
                       decoration: InputDecoration(

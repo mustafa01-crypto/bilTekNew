@@ -53,7 +53,7 @@ class _AnaSayfaState extends State<AnaSayfa> {
             title: "Destek",
           ),
           CustomBottomNavigationBarItem(
-            icon: Icons.shopping_basket,
+            icon: Icons.shopping_cart_outlined,
             title: "Ürünler",
           ),
           CustomBottomNavigationBarItem(

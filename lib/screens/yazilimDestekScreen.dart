@@ -59,8 +59,8 @@ class _YazilimDestekState extends State<YazilimDestek> {
               children: snapshot.data!.docs.map((DocumentSnapshot document) {
                 return SafeArea(
                   child: Padding(
-                    padding: EdgeInsets.only(
-                        left: width*1/40,right: width*1/40 ,top: height * 1 / 30),
+                    padding: EdgeInsets.symmetric(
+                        horizontal: width * 1 / 40,vertical: 12),
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
@@ -69,19 +69,22 @@ class _YazilimDestekState extends State<YazilimDestek> {
                           width: width,
                           decoration: BoxDecoration(
                               borderRadius: BorderRadius.only(
-                                  topLeft: Radius.circular(4),
-                                  topRight: Radius.circular(4)),
+                                  topLeft: Radius.circular(15),
+                                  topRight: Radius.circular(15)),
                               color: turuncu),
-                          child: Row(
-                            children: [
-                              Padding(
-                                padding: const EdgeInsets.only(left: 3),
-                                child: kisaExpanded(document, 'talepturu'),
-                              ),
-                              kisaExpanded(document, 'talep'),
+                          child: IntrinsicHeight(
+                            child: Row(
+                              children: [
+                                kisaExpanded(document, 'talepturu'),
+                                VerticalDivider(
+                                  thickness: 2,
+                                  color: Color(0xFFF6F4F4),
+                                ),
+                                kisaExpanded(document, 'talep'),
 
-                            ],
+                              ],
 
+                            ),
                           ),
 
                         ),
@@ -102,7 +105,7 @@ class _YazilimDestekState extends State<YazilimDestek> {
     return Expanded(
         child: Center(
       child:
-          new Text(document.data()[doc], style: TextStyle(color: Colors.white,fontSize: 14)),
+          new Text(document.data()[doc],textAlign: TextAlign.center, style: TextStyle(color: Colors.white,fontSize: 14)),
     ));
   }
 }

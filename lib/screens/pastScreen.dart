@@ -39,7 +39,7 @@ class _PastScreenState extends State<PastScreen> {
                 return SafeArea(
                   child: Padding(
                     padding: EdgeInsets.symmetric(
-                        horizontal: width * 1 / 40, vertical: height * 1 / 30),
+                        horizontal: width * 1 / 40,vertical: 12),
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
@@ -48,8 +48,8 @@ class _PastScreenState extends State<PastScreen> {
                           width: width,
                           decoration: BoxDecoration(
                               borderRadius: BorderRadius.only(
-                                  topLeft: Radius.circular(4),
-                                  topRight: Radius.circular(4)),
+                                  topLeft: Radius.circular(15),
+                                  topRight: Radius.circular(15)),
                               color: turuncu),
                           child: IntrinsicHeight(
                             child: Row(
@@ -80,7 +80,7 @@ class _PastScreenState extends State<PastScreen> {
     return Expanded(
         child: Center(
       child:
-          new Text(document.data()[doc], style: TextStyle(color: Colors.white)),
+          new Text(document.data()[doc], textAlign: TextAlign.center,style: TextStyle(color: Colors.white)),
     ));
   }
 }
