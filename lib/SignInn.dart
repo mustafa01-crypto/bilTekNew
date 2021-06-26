@@ -94,20 +94,21 @@ class _SignInState extends State<SignIn> {
                           height: 25,
                         ),
                         Container(
-                          height: height * 1 / 16,
+                          height: height * 1 / 14,
                           width: width * 9.6 / 10,
                           decoration: BoxDecoration(
                             border: Border.all(color: turuncu, width: 2),
                             color: Colors.white,
                             borderRadius: BorderRadius.only(
-                                topLeft: Radius.circular(10),
-                                topRight: Radius.circular(10),
-                                bottomLeft: Radius.circular(10),
-                                bottomRight: Radius.circular(10)),
+                                topLeft: Radius.circular(20),
+                                topRight: Radius.circular(20),
+                                bottomLeft: Radius.circular(20),
+                                bottomRight: Radius.circular(20)),
                           ),
                           child: Padding(
-                            padding: const EdgeInsets.all(8),
+                            padding: const EdgeInsets.only(left: 15,right: 15,bottom: 8,top: 8),
                             child: TextFormField(
+                              cursorColor: turuncu,
                               validator: (val) {
                                 return RegExp(
                                     r"^[a-zA-Z0-9.a-zA-Z0-9.!#$%&'*+-/=?^_`{|}~]+@[a-zA-Z0-9]+\.[a-zA-Z]+")
@@ -131,25 +132,27 @@ class _SignInState extends State<SignIn> {
                           height: 15,
                         ),
                         Container(
-                          height: height * 1 / 16,
+                          height: height * 1 / 14,
                           width: width * 9.6 / 10,
                           decoration: BoxDecoration(
                             border: Border.all(color: turuncu, width: 2),
                             color: Colors.white,
                             borderRadius: BorderRadius.only(
-                                topLeft: Radius.circular(10),
-                                topRight: Radius.circular(10),
-                                bottomLeft: Radius.circular(10),
-                                bottomRight: Radius.circular(10)),
+                                topLeft: Radius.circular(20),
+                                topRight: Radius.circular(20),
+                                bottomLeft: Radius.circular(20),
+                                bottomRight: Radius.circular(20)),
                           ),
                           child: Padding(
-                            padding: EdgeInsets.only(
-                                bottom: height * 1 / 100, left: 8, right: 8),
+                            padding: const EdgeInsets.only(left: 15,right: 15,bottom: 8,top: 8),
                             child: TextFormField(
+
                                 controller: t2,
                                 style: TextStyle(color: Colors.grey.shade800),
                                 obscureText: showPassword,
                                 decoration: InputDecoration(
+                                  fillColor: turuncu,
+                                  hoverColor: turuncu,
                                   hintText: "Şifre",
                                   hintStyle:
                                   TextStyle(color: Colors.grey.shade700),

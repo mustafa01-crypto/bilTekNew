@@ -98,16 +98,16 @@ class _SignUpState extends State<SignUp> {
                         ),
                         SizedBox(height: 25,),
                         Container(
-                          height: height * 1 / 16,
+                          height: height * 1 / 14,
                           width: width * 9.6 / 10,
                           decoration: BoxDecoration(
                             border: Border.all(color: turuncu, width: 2),
                             color: Colors.white,
                             borderRadius: BorderRadius.only(
-                                topLeft: Radius.circular(10),
-                                topRight: Radius.circular(10),
-                                bottomLeft: Radius.circular(10),
-                                bottomRight: Radius.circular(10)),
+                                topLeft: Radius.circular(20),
+                                topRight: Radius.circular(20),
+                                bottomLeft: Radius.circular(20),
+                                bottomRight: Radius.circular(20)),
                           ),
                           child: formElement(
                               textEditingController: t1,
@@ -121,20 +121,21 @@ class _SignUpState extends State<SignUp> {
                         ),
                         SizedBox(height: 15,),
                         Container(
-                          height: height * 1 / 16,
+                          height: height * 1 / 14,
                           width: width * 9.6 / 10,
                           decoration: BoxDecoration(
                             border: Border.all(color: turuncu, width: 2),
                             color: Colors.white,
                             borderRadius: BorderRadius.only(
-                                topLeft: Radius.circular(10),
-                                topRight: Radius.circular(10),
-                                bottomLeft: Radius.circular(10),
-                                bottomRight: Radius.circular(10)),
+                                topLeft: Radius.circular(20),
+                                topRight: Radius.circular(20),
+                                bottomLeft: Radius.circular(20),
+                                bottomRight: Radius.circular(20)),
                           ),
                           child: Padding(
-                            padding: const EdgeInsets.all(8.0),
+                            padding: const EdgeInsets.only(left: 15,right: 15,bottom: 8,top: 8),
                             child: TextFormField(
+                              cursorColor: turuncu,
                               validator: (val) {
                                 return RegExp(
                                             r"^[a-zA-Z0-9.a-zA-Z0-9.!#$%&'*+-/=?^_`{|}~]+@[a-zA-Z0-9]+\.[a-zA-Z]+")
@@ -161,21 +162,21 @@ class _SignUpState extends State<SignUp> {
                         ),
                         SizedBox(height: 15,),
                         Container(
-                          height: height * 1 / 16,
+                          height: height * 1 / 14,
                           width: width * 9.6 / 10,
                           decoration: BoxDecoration(
                             border: Border.all(color: turuncu, width: 2),
                             color: Colors.white,
                             borderRadius: BorderRadius.only(
-                                topLeft: Radius.circular(10),
-                                topRight: Radius.circular(10),
-                                bottomLeft: Radius.circular(10),
-                                bottomRight: Radius.circular(10)),
+                                topLeft: Radius.circular(20),
+                                topRight: Radius.circular(20),
+                                bottomLeft: Radius.circular(20),
+                                bottomRight: Radius.circular(20)),
                           ),
                           child: Padding(
-                            padding: const EdgeInsets.all(
-                               8),
+                            padding: const EdgeInsets.only(left: 15,right: 15,bottom: 8,top: 8),
                             child: TextFormField(
+                              cursorColor: turuncu,
                               validator: (deger) {
                                 if (deger!.isEmpty || deger.length < 6) {
                                   return "Lütfen 6 karakterden uzun bir şifre giriniz";
@@ -202,21 +203,21 @@ class _SignUpState extends State<SignUp> {
                         ),
                         SizedBox(height: 15,),
                         Container(
-                          height: height * 1 / 16,
+                          height: height * 1 / 14,
                           width: width * 9.6 / 10,
                           decoration: BoxDecoration(
                             border: Border.all(color: turuncu, width: 2),
                             color: Colors.white,
                             borderRadius: BorderRadius.only(
-                                topLeft: Radius.circular(10),
-                                topRight: Radius.circular(10),
-                                bottomLeft: Radius.circular(10),
-                                bottomRight: Radius.circular(10)),
+                                  topLeft: Radius.circular(20),
+                                  topRight: Radius.circular(20),
+                                  bottomLeft: Radius.circular(20),
+                                  bottomRight: Radius.circular(20)),
                           ),
                           child: Padding(
-                            padding: const EdgeInsets.all(
-                               8),
+                            padding: const EdgeInsets.only(left: 15,right: 15,bottom: 8,top: 8),
                             child: TextFormField(
+                              cursorColor: turuncu,
                               validator: (deger) {
                                 if (t3.text == t4.text) {
                                   if (deger!.isEmpty || deger.length < 6) {
@@ -246,16 +247,16 @@ class _SignUpState extends State<SignUp> {
                         ),
                         SizedBox(height: 15,),
                         Container(
-                          height: height * 1 / 16,
+                          height: height * 1 / 14,
                           width: width * 9.6 / 10,
                           decoration: BoxDecoration(
                             border: Border.all(color: turuncu, width: 2),
                             color: Colors.white,
                             borderRadius: BorderRadius.only(
-                                topLeft: Radius.circular(10),
-                                topRight: Radius.circular(10),
-                                bottomLeft: Radius.circular(10),
-                                bottomRight: Radius.circular(10)),
+                                topLeft: Radius.circular(20),
+                                topRight: Radius.circular(20),
+                                bottomLeft: Radius.circular(20),
+                                bottomRight: Radius.circular(20)),
                           ),
                           child: formElement(
                               textEditingController: t5,
@@ -264,16 +265,16 @@ class _SignUpState extends State<SignUp> {
                         ),
                         SizedBox(height: 15,),
                         Container(
-                          height: height * 1 / 16,
+                          height: height * 1 / 14,
                           width: width * 9.6 / 10,
                           decoration: BoxDecoration(
                             border: Border.all(color: turuncu, width: 2),
                             color: Colors.white,
                             borderRadius: BorderRadius.only(
-                                topLeft: Radius.circular(10),
-                                topRight: Radius.circular(10),
-                                bottomLeft: Radius.circular(10),
-                                bottomRight: Radius.circular(10)),
+                                topLeft: Radius.circular(20),
+                                topRight: Radius.circular(20),
+                                bottomLeft: Radius.circular(20),
+                                bottomRight: Radius.circular(20)),
                           ),
                           child: formElement(
                               textEditingController: t6,
@@ -284,16 +285,16 @@ class _SignUpState extends State<SignUp> {
                           height: height * 1 / 20,
                         ),
                         Container(
-                          height: height * 1 / 16,
+                          height: height * 1 / 14,
                           width: width * 9.6 / 10,
                           decoration: BoxDecoration(
                             border: Border.all(color: turuncu, width: 2),
                             color: Colors.white,
                             borderRadius: BorderRadius.only(
-                                topLeft: Radius.circular(10),
-                                topRight: Radius.circular(10),
-                                bottomLeft: Radius.circular(10),
-                                bottomRight: Radius.circular(10)),
+                                topLeft: Radius.circular(20),
+                                topRight: Radius.circular(20),
+                                bottomLeft: Radius.circular(20),
+                                bottomRight: Radius.circular(20)),
                           ),
                           child: formElement(
                               textEditingController: t11,
@@ -306,16 +307,16 @@ class _SignUpState extends State<SignUp> {
                         ),
                         SizedBox(height: 15,),
                         Container(
-                          height: height * 1 / 16,
+                          height: height * 1 / 14,
                           width: width * 9.6 / 10,
                           decoration: BoxDecoration(
                             border: Border.all(color: turuncu, width: 2),
                             color: Colors.white,
                             borderRadius: BorderRadius.only(
-                                topLeft: Radius.circular(10),
-                                topRight: Radius.circular(10),
-                                bottomLeft: Radius.circular(10),
-                                bottomRight: Radius.circular(10)),
+                                topLeft: Radius.circular(20),
+                                topRight: Radius.circular(20),
+                                bottomLeft: Radius.circular(20),
+                                bottomRight: Radius.circular(20)),
                           ),
                           child: formElement(
                               textEditingController: t12,
@@ -328,32 +329,32 @@ class _SignUpState extends State<SignUp> {
                         ),
                         SizedBox(height: 15,),
                         Container(
-                          height: height * 1 / 16,
+                          height: height * 1 / 14,
                           width: width * 9.6 / 10,
                           decoration: BoxDecoration(
                             border: Border.all(color: turuncu, width: 2),
                             color: Colors.white,
                             borderRadius: BorderRadius.only(
-                                topLeft: Radius.circular(10),
-                                topRight: Radius.circular(10),
-                                bottomLeft: Radius.circular(10),
-                                bottomRight: Radius.circular(10)),
+                                topLeft: Radius.circular(20),
+                                topRight: Radius.circular(20),
+                                bottomLeft: Radius.circular(20),
+                                bottomRight: Radius.circular(20)),
                           ),
                           child: formElement(
                               textEditingController: t13, text: "Adres 2"),
                         ),
                         SizedBox(height: 15,),
                         Container(
-                          height: height * 1 / 16,
+                          height: height * 1 / 14,
                           width: width * 9.6 / 10,
                           decoration: BoxDecoration(
                             border: Border.all(color: turuncu, width: 2),
                             color: Colors.white,
                             borderRadius: BorderRadius.only(
-                                topLeft: Radius.circular(10),
-                                topRight: Radius.circular(10),
-                                bottomLeft: Radius.circular(10),
-                                bottomRight: Radius.circular(10)),
+                                topLeft: Radius.circular(20),
+                                topRight: Radius.circular(20),
+                                bottomLeft: Radius.circular(20),
+                                bottomRight: Radius.circular(20)),
                           ),
                           child: formElement(
                               textEditingController: t14,
@@ -366,16 +367,16 @@ class _SignUpState extends State<SignUp> {
                         ),
                         SizedBox(height: 15,),
                         Container(
-                          height: height * 1 / 16,
+                          height: height * 1 / 14,
                           width: width * 9.6 / 10,
                           decoration: BoxDecoration(
                             border: Border.all(color: turuncu, width: 2),
                             color: Colors.white,
                             borderRadius: BorderRadius.only(
-                                topLeft: Radius.circular(10),
-                                topRight: Radius.circular(10),
-                                bottomLeft: Radius.circular(10),
-                                bottomRight: Radius.circular(10)),
+                                topLeft: Radius.circular(20),
+                                topRight: Radius.circular(20),
+                                bottomLeft: Radius.circular(20),
+                                bottomRight: Radius.circular(20)),
                           ),
                           child: formElement(
                               textEditingController: t15,
@@ -441,8 +442,9 @@ class _SignUpState extends State<SignUp> {
       TextInputType? textInputType,
       Icon? icon}) {
     return Padding(
-      padding: const EdgeInsets.only(left: 8, top: 5, right: 8, bottom: 5),
+      padding: const EdgeInsets.only(left: 15,right: 15,bottom: 8,top: 8),
       child: TextFormField(
+        cursorColor: turuncu,
         keyboardType: textInputType,
         style: TextStyle(color: Colors.grey.shade800),
         controller: textEditingController,
