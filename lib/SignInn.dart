@@ -98,7 +98,7 @@ class _SignInState extends State<SignIn> {
                           width: width * 9.6 / 10,
                           decoration: BoxDecoration(
                             border: Border.all(color: turuncu, width: 2),
-                            color: Colors.white,
+                            color: Colors.amber.shade200,
                             borderRadius: BorderRadius.only(
                                 topLeft: Radius.circular(20),
                                 topRight: Radius.circular(20),
@@ -132,11 +132,12 @@ class _SignInState extends State<SignIn> {
                           height: 15,
                         ),
                         Container(
+
                           height: height * 1 / 14,
                           width: width * 9.6 / 10,
                           decoration: BoxDecoration(
                             border: Border.all(color: turuncu, width: 2),
-                            color: Colors.white,
+                            color: Colors.amber.shade200,
                             borderRadius: BorderRadius.only(
                                 topLeft: Radius.circular(20),
                                 topRight: Radius.circular(20),
