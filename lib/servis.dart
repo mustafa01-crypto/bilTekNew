@@ -1,8 +1,10 @@
 import 'dart:math';
+import 'package:biltek/screens/bildirimlerScreen.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'Widgets/showDialog.dart';
 import 'constants/constants.dart';
 
@@ -70,21 +72,20 @@ class _ServisState extends State<Servis> {
     return SafeArea(
       child: Scaffold(
         appBar: AppBar(
+          leading: IconButton(
+            icon: Icon(Icons.arrow_back, color: turuncu),
+            onPressed: () => Get.back(),
+          ),
+          automaticallyImplyLeading: false,
           backgroundColor: Colors.white,
-          title: Center(
-              child: _isSearching == false
-                  ? Image(
-                      image: ExactAssetImage("assets/appBar.png"),
-                      height: height * 1 / 14,
-                      width: width * 1 / 2,
-                      alignment: Alignment.center,
-                    )
-                  : TextField(
-                      controller: _searchQueryController,
-                      decoration: InputDecoration(
-                        hintText: "Arama yapın",
-                      ),
-                    )),
+          title: _isSearching == false
+              ? Image.asset('assets/appBar2.png', fit: BoxFit.fill)
+              : TextField(
+                  controller: _searchQueryController,
+                  decoration: InputDecoration(
+                    hintText: "Arama yapın",
+                  ),
+                ),
           actions: [
             _isSearching == false
                 ? IconButton(
@@ -114,7 +115,9 @@ class _ServisState extends State<Servis> {
                 Icons.add_alert_sharp,
                 color: turuncu,
               ),
-              onPressed: () {},
+              onPressed: () {
+                Get.to(Norifications());
+              },
             ),
           ],
         ),

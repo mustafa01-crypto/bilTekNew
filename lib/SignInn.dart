@@ -42,6 +42,11 @@ class _SignInState extends State<SignIn> {
     } on FirebaseAuthException catch (e) {
       if (e.code == 'user-not-found') {
         print('No user found for that email.');
+
+        showMaterialDialog(title: "Hatalı kullanıcı bilgileri ",
+            content: "Lütfen bilgilerinizi kontrol ediniz",
+            context: context);
+
       } else if (e.code == 'wrong-password') {
         print('Wrong password provided for that user.');
         showMaterialDialog(title: "Hatalı kullanıcı bilgileri ",
@@ -86,7 +91,7 @@ class _SignInState extends State<SignIn> {
                           padding: EdgeInsets.only(top: height * 1 / 10),
                           child: Center(
                               child: Image.asset(
-                                "assets/logo2.png",
+                                "assets/logo3.png",
                                 width: width * 4 / 9,
                               )),
                         ),
@@ -98,7 +103,7 @@ class _SignInState extends State<SignIn> {
                           width: width * 9.6 / 10,
                           decoration: BoxDecoration(
                             border: Border.all(color: turuncu, width: 2),
-                            color: Colors.amber.shade200,
+                            color: Colors.grey.shade100,
                             borderRadius: BorderRadius.only(
                                 topLeft: Radius.circular(20),
                                 topRight: Radius.circular(20),
@@ -137,7 +142,7 @@ class _SignInState extends State<SignIn> {
                           width: width * 9.6 / 10,
                           decoration: BoxDecoration(
                             border: Border.all(color: turuncu, width: 2),
-                            color: Colors.amber.shade200,
+                            color: Colors.grey.shade100,
                             borderRadius: BorderRadius.only(
                                 topLeft: Radius.circular(20),
                                 topRight: Radius.circular(20),

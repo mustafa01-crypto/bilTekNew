@@ -76,22 +76,22 @@ class _YazilimState extends State<Yazilim> {
     return SafeArea(
       child: Scaffold(
         appBar: AppBar(
+          leading: IconButton(
+            icon: Icon(Icons.arrow_back, color: turuncu),
+            onPressed: () => Get.back(),
+          ),
+          automaticallyImplyLeading: false,
           backgroundColor: Colors.white,
-          title: Center(
-              child: _isSearching == false
-                  ? Image(
-                      image: ExactAssetImage("assets/appBar.png"),
-                      height: height * 1 / 14,
-                      width: width * 1 / 2,
-                      alignment: Alignment.center,
-                    )
-                  : TextField(
-                      controller: _searchQueryController,
-                      decoration: InputDecoration(
-                        hintText: "Arama yapın",
-                      ),
-                    )),
+          title: _isSearching == false
+              ? Image.asset('assets/appBar2.png', fit: BoxFit.fill)
+              : TextField(
+                  controller: _searchQueryController,
+                  decoration: InputDecoration(
+                    hintText: "Arama yapın",
+                  ),
+                ),
           actions: [
+
             _isSearching == false
                 ? IconButton(
                     icon: Icon(

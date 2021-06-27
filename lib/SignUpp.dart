@@ -102,7 +102,7 @@ class _SignUpState extends State<SignUp> {
                           width: width * 9.6 / 10,
                           decoration: BoxDecoration(
                             border: Border.all(color: turuncu, width: 2),
-                            color: Colors.amber.shade200,
+                            color: Colors.grey.shade100,
                             borderRadius: BorderRadius.only(
                                 topLeft: Radius.circular(20),
                                 topRight: Radius.circular(20),
@@ -125,7 +125,7 @@ class _SignUpState extends State<SignUp> {
                           width: width * 9.6 / 10,
                           decoration: BoxDecoration(
                             border: Border.all(color: turuncu, width: 2),
-                            color: Colors.amber.shade200,
+                            color: Colors.grey.shade100,
                             borderRadius: BorderRadius.only(
                                 topLeft: Radius.circular(20),
                                 topRight: Radius.circular(20),
@@ -166,7 +166,7 @@ class _SignUpState extends State<SignUp> {
                           width: width * 9.6 / 10,
                           decoration: BoxDecoration(
                             border: Border.all(color: turuncu, width: 2),
-                            color: Colors.amber.shade200,
+                            color: Colors.grey.shade100,
                             borderRadius: BorderRadius.only(
                                 topLeft: Radius.circular(20),
                                 topRight: Radius.circular(20),
@@ -207,7 +207,7 @@ class _SignUpState extends State<SignUp> {
                           width: width * 9.6 / 10,
                           decoration: BoxDecoration(
                             border: Border.all(color: turuncu, width: 2),
-                            color: Colors.amber.shade200,
+                            color: Colors.grey.shade100,
                             borderRadius: BorderRadius.only(
                                   topLeft: Radius.circular(20),
                                   topRight: Radius.circular(20),
@@ -251,7 +251,7 @@ class _SignUpState extends State<SignUp> {
                           width: width * 9.6 / 10,
                           decoration: BoxDecoration(
                             border: Border.all(color: turuncu, width: 2),
-                            color: Colors.amber.shade200,
+                            color: Colors.grey.shade100,
                             borderRadius: BorderRadius.only(
                                 topLeft: Radius.circular(20),
                                 topRight: Radius.circular(20),
@@ -269,7 +269,7 @@ class _SignUpState extends State<SignUp> {
                           width: width * 9.6 / 10,
                           decoration: BoxDecoration(
                             border: Border.all(color: turuncu, width: 2),
-                            color: Colors.amber.shade200,
+                            color: Colors.grey.shade100,
                             borderRadius: BorderRadius.only(
                                 topLeft: Radius.circular(20),
                                 topRight: Radius.circular(20),
@@ -289,7 +289,7 @@ class _SignUpState extends State<SignUp> {
                           width: width * 9.6 / 10,
                           decoration: BoxDecoration(
                             border: Border.all(color: turuncu, width: 2),
-                            color: Colors.amber.shade200,
+                            color: Colors.grey.shade100,
                             borderRadius: BorderRadius.only(
                                 topLeft: Radius.circular(20),
                                 topRight: Radius.circular(20),
@@ -311,7 +311,7 @@ class _SignUpState extends State<SignUp> {
                           width: width * 9.6 / 10,
                           decoration: BoxDecoration(
                             border: Border.all(color: turuncu, width: 2),
-                            color: Colors.amber.shade200,
+                            color: Colors.grey.shade100,
                             borderRadius: BorderRadius.only(
                                 topLeft: Radius.circular(20),
                                 topRight: Radius.circular(20),
@@ -333,7 +333,7 @@ class _SignUpState extends State<SignUp> {
                           width: width * 9.6 / 10,
                           decoration: BoxDecoration(
                             border: Border.all(color: turuncu, width: 2),
-                            color: Colors.amber.shade200,
+                            color: Colors.grey.shade100,
                             borderRadius: BorderRadius.only(
                                 topLeft: Radius.circular(20),
                                 topRight: Radius.circular(20),
@@ -349,7 +349,7 @@ class _SignUpState extends State<SignUp> {
                           width: width * 9.6 / 10,
                           decoration: BoxDecoration(
                             border: Border.all(color: turuncu, width: 2),
-                            color: Colors.amber.shade200,
+                            color: Colors.grey.shade100,
                             borderRadius: BorderRadius.only(
                                 topLeft: Radius.circular(20),
                                 topRight: Radius.circular(20),
@@ -371,7 +371,7 @@ class _SignUpState extends State<SignUp> {
                           width: width * 9.6 / 10,
                           decoration: BoxDecoration(
                             border: Border.all(color: turuncu, width: 2),
-                            color: Colors.amber.shade200,
+                            color: Colors.grey.shade100,
                             borderRadius: BorderRadius.only(
                                 topLeft: Radius.circular(20),
                                 topRight: Radius.circular(20),
