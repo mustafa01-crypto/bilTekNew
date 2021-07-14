@@ -201,7 +201,7 @@ class _ServisState extends State<Servis> {
                   width: width * 9 / 10,
                   decoration: BoxDecoration(
                     border: Border.all(color: turuncu, width: 3),
-                    color: Colors.white,
+                    color: Colors.grey.shade100,
                     borderRadius: BorderRadius.only(
                         topLeft: Radius.circular(25),
                         topRight: Radius.circular(25),

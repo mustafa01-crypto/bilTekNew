@@ -47,10 +47,21 @@ class _PastScreenState extends State<PastScreen> {
                           height: height * 1 / 12,
                           width: width,
                           decoration: BoxDecoration(
+                              border: Border.all(color: Colors.blueAccent),
                               borderRadius: BorderRadius.only(
                                   topLeft: Radius.circular(15),
                                   topRight: Radius.circular(15)),
-                              color: turuncu),
+                              color: Colors.grey.shade100,
+                            boxShadow: [
+                              BoxShadow(
+                                color: Colors.grey.withOpacity(0.5),
+                                spreadRadius: 5,
+                                blurRadius: 7,
+                                offset: Offset(0, 3),
+                              )
+                            ]
+                          ),
+
                           child: IntrinsicHeight(
                             child: Row(
                               children: [
@@ -80,7 +91,7 @@ class _PastScreenState extends State<PastScreen> {
     return Expanded(
         child: Center(
       child:
-          new Text(document.data()[doc], textAlign: TextAlign.center,style: TextStyle(color: Colors.white)),
+          new Text(document.data()[doc], textAlign: TextAlign.center,style: TextStyle(color: turuncu)),
     ));
   }
 }
