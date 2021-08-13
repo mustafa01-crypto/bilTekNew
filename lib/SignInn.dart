@@ -212,21 +212,29 @@ class _SignInState extends State<SignIn> {
                         ),
                         SizedBox(height: 15,),
                         Padding(
-                          padding: EdgeInsets.only(
-                            left: width * 1 / 30,
-                            right: width * 1 / 30,
+                          padding: EdgeInsets.symmetric(
+                           horizontal: width* 1/60
                           ),
-                          child: InkWell(
-                            onTap: () {
+                          child: TextButton(
+                            onPressed: ()
+                            {
                               Get.to(() => SignUp());
-                            },
-                            child: Container(
-                                child: Image.asset(
-                                  "assets/kyt1.png",
-                                  fit: BoxFit.fill,
-                                )),
+                            }, child: Container(
+                            width: width,
+                            height: 70,
+
+                            decoration: BoxDecoration(
+                              gradient: gradient,
+                              borderRadius: BorderRadius.all(
+                                  Radius.circular(30) )
+                            ),
+                            child: Center(
+                              child: Text("KAYIT OL",
+                              textAlign: TextAlign.center,),
+                            ),
                           ),
-                        )
+                          ),
+                        ),
                       ],
                     ),
                   )
@@ -238,4 +246,5 @@ class _SignInState extends State<SignIn> {
       ),
     );
   }
+
 }

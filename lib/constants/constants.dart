@@ -26,3 +26,12 @@ const kMessageContainerDecoration = BoxDecoration(
  ),
 );
 
+Gradient gradient = LinearGradient(
+ begin: Alignment.topRight,
+ end: Alignment.bottomLeft,
+ colors: [
+  d,c,b,a,
+  turuncu,
+
+ ],
+);
